@@ -103,21 +103,29 @@ body {
 
 header {
     background-color: #000;
-    height: 100%;
     width: 50px;
+    flex-shrink: 0;
 }
 
 /*----------------
     MAIN
 ------------------*/
 main {
-    background-color: #000;
-    height: 100%;
+    background-color: #141922;
+    flex-grow: 1;
+    overflow-y: auto;
+    color: white;
+
 }
 
 .upgrade-nav {
     background-color: #080b12;
     height: 90px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    opacity: 0.5;
 }
 /*----------------
     FOOTER
