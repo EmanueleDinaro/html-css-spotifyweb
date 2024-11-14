@@ -27,6 +27,12 @@
     max-width: 100%;
 }
 
+body {
+    height: 100vh;
+    max-width: 576px;
+    margin: auto;
+}
+
 /*----------------
     LAYOUT
 ------------------*/
@@ -55,6 +61,12 @@
 
 .grow {
     flex-grow: 1;
+}
+
+.main-page {
+    height: calc(100% - 90px);
+    background-color: #141922;
+    display: flex;
 }
 
 /*----------------
@@ -89,13 +101,31 @@ body {
     HEADER
 ------------------*/
 
+header {
+    background-color: #000;
+    height: 100%;
+    width: 50px;
+}
+
 /*----------------
     MAIN
 ------------------*/
+main {
+    background-color: #000;
+    height: 100%;
+}
 
+.upgrade-nav {
+    background-color: #080b12;
+    height: 90px;
+}
 /*----------------
     FOOTER
 ------------------*/
+footer {
+    height: 90px;
+    background-color: #282828;
+}
 
 /*----------------
     RESPONSIVE
