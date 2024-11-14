@@ -29,7 +29,6 @@
 
 body {
     height: 100vh;
-    max-width: 576px;
     margin: auto;
 }
 
@@ -81,8 +80,8 @@ body {
 ------------------*/
 .btn {
     background-color: transparent;
+    /* border: none; */
     font-family: inherit;
-    border: none;
     padding: 6px 12px;
     cursor: pointer;
 }
@@ -93,8 +92,11 @@ body {
 }
 
 .btn-primary {
-    background-color: lightcoral;
     color: #fff;
+    border-color: #fff;
+    border-radius: 30px;
+    padding: 10px 24px;
+    text-transform: uppercase;
 }
 
 /*----------------
@@ -126,6 +128,10 @@ main {
     left: 0;
     z-index: 10;
     opacity: 0.5;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 10px;
 }
 /*----------------
     FOOTER
@@ -141,17 +147,21 @@ footer {
 ------------------*/
 /* SM >= 576px */
 @media screen and (min-width: 576px) {
+}
+
+/* MD >= 640px */
+@media screen and (min-width: 640px) {
+    header {
+        width: 230px;
+        flex-shrink: 0;
+    }
+}
+/* LG >= 880px */
+@media screen and (min-width: 880px) {
+    
     
 }
-/* MD >= 768px */
-@media screen and (min-width: 768px) {
-    
-}
-/* LG >= 992px */
-@media screen and (min-width: 992px) {
-    
-}
-/* XL >= 1200px */
-@media screen and (min-width: 1200px) {
+/* XL >= 1400px */
+@media screen and (min-width: 1400px) {
     
 }
