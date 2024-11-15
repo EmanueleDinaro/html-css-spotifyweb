@@ -206,6 +206,45 @@ main {
     border-bottom: 50%;
     cursor: pointer;
 }
+ /* RECENTLY PLAYED SECTION */
+.recently-played,
+.create-for-you {
+    padding: 25px;
+}
+
+.recently-played h2 {
+    margin-bottom: 25px;
+    padding-left: 5px;
+    color: #fff;
+}
+
+.create-for-you h2,
+.album-name > h3 {
+    color: #fff;
+}
+
+.create-for-you h2,
+.create-for-you > p {
+    margin-bottom: 5px;
+    padding-left: 5px;
+}
+
+.row {
+    width: 100%;
+}
+
+.recently-played .row .col,
+.create-for-you .row .col {
+    width: 50%;
+    padding: 10px 5px;
+}
+
+.recently-played .album {
+}
+
+.album:hover {
+    cursor: pointer;
+}
 
 /*----------------
     FOOTER
@@ -364,10 +403,20 @@ footer {
         margin-left: 10px;
     }
 
+    /* RESPONSIVE RECENTLY PLAYED */
+    .recently-played .row .col,
+    .create-for-you .row .col {
+        width: calc(100% / 4);
+    }
 }
 /* LG >= 880px */
 @media screen and (min-width: 880px) {
-    
+    /* RESPONSIVE RECENTLY PLAYED */
+      
+    .recently-played .row .col,
+    .create-for-you .row .col {
+        width: calc(100% / 6);
+    }
     
 }
 /* XL >= 1400px */
