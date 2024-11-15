@@ -208,7 +208,8 @@ main {
 }
  /* RECENTLY PLAYED SECTION */
 .recently-played,
-.create-for-you {
+.create-for-you,
+.popular-artist {
     padding: 25px;
 }
 
@@ -234,13 +235,15 @@ main {
 }
 
 .recently-played .row .col,
-.create-for-you .row .col {
+.create-for-you .row .col,
+.popular-artist .row .col {
     width: 50%;
     padding: 10px 5px;
 }
 
 .recently-played .album,
-.create-for-you .album {
+.create-for-you .album,
+.popular-artist .album {
     position: relative;
     display: block;
 }
@@ -269,6 +272,14 @@ main {
 
 .album:hover {
     cursor: pointer;
+}
+
+.popular-artist .album{
+    border-radius: 50%;
+}
+
+.popular-artist .overlay-album {
+    border-radius: 50%;
 }
 
 /*----------------
@@ -427,7 +438,8 @@ footer {
 
     /* RESPONSIVE RECENTLY PLAYED */
     .recently-played .row .col,
-    .create-for-you .row .col {
+    .create-for-you .row .col,
+    .popular-artist .row .col {
         width: calc(100% / 4);
     }
 }
@@ -436,7 +448,8 @@ footer {
     /* RESPONSIVE RECENTLY PLAYED */
       
     .recently-played .row .col,
-    .create-for-you .row .col {
+    .create-for-you .row .col,
+    .popular-artist .row .col {
         width: calc(100% / 6);
     }
     
