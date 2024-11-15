@@ -126,8 +126,7 @@ header .logo-small {
 }
 
 header .nav-icons {
-    padding: 5px 10px;
-    
+    padding: 5px 10px; 
 }
 
 .name-icon {
@@ -135,12 +134,15 @@ header .nav-icons {
     display: none;
 }
 
+.nav-icons:hover  {
+    cursor: pointer;
+}
+
 .nav-bot {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 10px;
-    
 }
 
 #download {
@@ -164,9 +166,6 @@ hr {
     display: none;
 }
 
-
-
-
 /*----------------
     MAIN
 ------------------*/
@@ -175,7 +174,6 @@ main {
     flex-grow: 1;
     overflow-y: auto;
     color: white;
-
 }
 
 .upgrade-nav {
@@ -191,6 +189,7 @@ main {
     align-items: center;
     padding-right: 10px;
 }
+
 /*----------------
     FOOTER
 ------------------*/
@@ -226,26 +225,37 @@ footer {
         display: none;
     }
 
+    /* RESPONSIVE NAVBAR (HOME, LIBRARY, SEARCH) */
     .nav-bar {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
     }
-    .nav-bar div {
-        display: flex;
-        align-items: center
-    }
-
     .nav-bar .nav-icons {
-        width: 60px;
-        padding-left: 15px;
-
+        display: flex;
+        align-items: center;
+        padding: 0 10px;
+        margin-bottom: 10px;
+    }
+    .nav-icons:hover {
+        border-left: 3px solid #adff2f;
+    }
+    .nav-bar .nav-icons img {
+        width: 40px;
     }
     .name-icon {
         display: inline-block;
         font-size: 18px;
         font-weight: 800;
+        height: 100%;
+        line-height: 40px;
+        padding-left: 15px;
     }
+    .name-icon:hover  {
+        color: #fff;
+    }
+
+    /* RESPONSIVE PLAYLIST */
     .nav-playlist {
         display: flex;
         flex-direction: column;
@@ -271,7 +281,6 @@ footer {
     .nav-playlist ul li {
         color: #707070;
     }
-
     .nav-playlist .plus-icon{
         display: inline-block;
         width: 40px;
@@ -284,6 +293,8 @@ footer {
         color: #000;
         font-weight: 900;
     }
+
+    /* RESPONSIVE NAV BOTTOM (DOWNLOAD AND PROFILE) */
     .nav-bot {
         background-color: #000;
         width: 100%;
@@ -293,14 +304,12 @@ footer {
         bottom: 0;
         left: 0;
     }
-
     .profile,
     .download {
         display: flex;
         align-items: center;
         margin-bottom: 0;
     }
-
     .nav-bot .download-app {
         display: inline;
         color: #707070;
@@ -308,14 +317,12 @@ footer {
         margin-left: 10px;
         font-size: 14px;
     }
-
     hr {
         display: block;
         width: 100%;
         margin: 20px 0;
         border-color: #707070;
     }
-
     .nav-bot .name-profile {
         display: inline;
         color: #fff;
