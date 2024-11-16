@@ -76,6 +76,11 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 /*----------------
     BUTTONS
 ------------------*/
@@ -125,6 +130,7 @@ header .nav-icons {
 
 .nav-icons:hover  {
     cursor: pointer;
+    border-left: 3px solid #adff2f;
 }
 
 .nav-bot {
@@ -141,6 +147,10 @@ header .nav-icons {
 .download {
     margin-bottom: 20px;
 }
+
+/* .download:hover {
+    color: #fff;
+} */
 
 #profile {
     width: 30px;
@@ -213,21 +223,27 @@ main {
     padding: 25px;
 }
 
-.recently-played h2 {
-    margin-bottom: 25px;
-    padding-left: 5px;
-    color: #fff;
-}
-
+.recently-played h2,
 .create-for-you h2,
+.popular-artist h2,
 .album-name > h3 {
     color: #fff;
 }
 
+.recently-played h2,
 .create-for-you h2,
-.create-for-you > p {
+.create-for-you > p,
+.popular-artist h2,
+.popular-artist > p {
     margin-bottom: 5px;
     padding-left: 5px;
+}
+
+.recently-played .album-name,
+.create-for-you .album-name,
+.popular-artist .album-name {
+    margin-top: 15px;
+    text-align: center;
 }
 
 .row {
@@ -238,7 +254,7 @@ main {
 .create-for-you .row .col,
 .popular-artist .row .col {
     width: 50%;
-    padding: 10px 5px;
+    padding: 15px 5px;
 }
 
 .recently-played .album,
@@ -398,6 +414,18 @@ footer {
         font-size: 30px;
         color: #000;
         font-weight: 700;
+        border: none;
+    }
+
+    .plus-icon:hover {
+        cursor: pointer;
+        background-color: #fff;
+    }
+
+    .nav-playlist ul li:hover,
+    .nav-playlist .create-playlist:hover {
+        cursor: pointer;
+        color: #fff;
     }
 
     /* RESPONSIVE NAV BOTTOM (DOWNLOAD AND PROFILE) */
