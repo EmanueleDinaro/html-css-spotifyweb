@@ -86,7 +86,7 @@ a {
 ------------------*/
 .btn {
     background-color: transparent;
-    /* border: none; */
+    border-color: inherit;
     font-family: inherit;
     padding: 6px 12px;
     cursor: pointer;
@@ -99,7 +99,6 @@ a {
 
 .btn-primary {
     color: #fff;
-    border-color: #fff;
     background-color: rgba(0, 0, 0, 0.7);
     border-radius: 30px;
     padding: 10px 24px;
@@ -156,6 +155,11 @@ header .nav-icons {
     width: 30px;
     background-color: #808080;
     border-radius: 50%;
+}
+
+.upgrade-nav .btn:hover {
+    font-size: 18px;
+    transition: 0.7;
 }
 
 /*--------------------------
@@ -306,8 +310,114 @@ footer {
     background-color: #282828;
     position: sticky;
     z-index: 69;
+    padding: 0px 10px;
 }
 
+footer .row {
+    width: 100%;
+    height: 100%;
+}
+.col.info-song {
+    width: 30%;
+    padding: 30px 0px;
+}
+
+
+footer .col {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    width: calc(100% / 3);
+
+}
+
+footer .col > img {
+    height: 100%;
+}
+
+.current-song {
+    margin-left: 15px;
+    font-size: 12px;
+}
+
+.current-song .artist {
+    font-weight: 600;
+    color: #fff;
+}
+.current-song .title-song {
+    font-weight: 500;
+}
+
+.current-song-icons {
+    margin-left: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 12px;
+}
+
+.col.bar-song {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 0px;
+    font-size: 1rem;
+    width: 40%;
+}
+.row.command {
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+}
+.row.command .fa-circle-play {
+    margin: 0 10px;
+    font-size: 22px;
+}
+
+.progression-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slider {
+    -webkit-appearance: none;
+    width: 30%;
+    height: 4px;
+    border-radius: 5px;
+    background: #808080;
+    outline: none;
+    margin: 0 15px;
+}
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #1db954;
+    cursor: pointer;
+}
+.progression-bar span {
+    font-size: 12px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.col.grow.volume{
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    column-gap: 5px;
+    row-gap: 0px;
+    font-size: 12px;
+    width: 30%;
+    color: #fff;
+}
+.col.grow.volume > .slider {
+    margin: 0 0;
+    width: 60px;
+}
 /*----------------
     RESPONSIVE
     Mobile First
@@ -438,13 +548,16 @@ footer {
         bottom: 0;
         left: 0;
     }
-    .profile,
-    .download {
+    .profile a,
+    .download a {
         display: flex;
         align-items: center;
+    }
+    .download,
+    .profile {
         margin-bottom: 0;
     }
-    .nav-bot .download-app {
+        .nav-bot .download-app {
         display: inline;
         color: #707070;
         font-weight: 600;
@@ -463,6 +576,10 @@ footer {
         font-weight: 600;
         margin-left: 10px;
     }
+    .download-app:hover {
+        cursor: pointer;
+        color: #fff;
+    }
 
     /* RESPONSIVE RECENTLY PLAYED */
     .recently-played .row .col,
@@ -470,6 +587,36 @@ footer {
     .popular-artist .row .col {
         width: calc(100% / 4);
     }
+
+    .col.info-song {
+        padding: 10px 0px;
+    }
+    
+    .current-song,
+    .current-song-icons {
+        margin-left: 15px;
+        font-size: 16px;
+    }
+
+    footer .progression-bar > .slider {
+        width: 60%;
+    }
+    .row.command {
+        gap: 20px;
+        font-size: 20px;
+    }
+    .row.command .fa-circle-play {
+        font-size: 26px;
+    }
+    .col.grow.volume {
+        column-gap: 20px;
+        font-size: 16px;
+    }
+    .col.grow.volume > .slider {
+        margin: 0 0;
+        width: 100px;
+    }
+
 }
 /* LG >= 880px */
 @media screen and (min-width: 880px) {
