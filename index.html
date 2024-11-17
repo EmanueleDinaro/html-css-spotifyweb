@@ -31,7 +31,7 @@
             <div class="nav-playlist">
                 <h2>playlist</h2>
                 <div class="create-playlist">
-                    <button class="plus-icon">+</button>
+                    <button class="plus-icon">+</button><strong>Crea Playlist</strong>
                     <!-- <div class="plus-icon">+</div><strong>Crea Playlist</strong> -->
                 </div>
                 <ul>
@@ -53,11 +53,11 @@
             
             <div class="nav-bot">
                 <div class="download">
-                    <img id="download" src="img/download.svg" alt="download"><span class="download-app">Installa App</span>
+                    <a href="#"><img id="download" src="img/download.svg" alt="download"><span class="download-app">Installa App</span></a>
                 </div>
                 <hr>
                 <div class="profile">
-                    <img id="profile" src="img/profile.svg" alt="profile"><span class="name-profile">John Doe</span>
+                    <a href="#"><img id="profile" src="img/profile.svg" alt="profile"><span class="name-profile">John Doe</span></a>
                 </div>
             </div>
         </header>
@@ -219,6 +219,45 @@
             </section>
         </main>
     </div>
-    <footer></footer>
+    <footer>
+        <div class="row">
+            <div class="col grow info-song">
+                <img src="img/sinister.jpeg" alt="current play">
+
+                <div class="current-song">
+                    <span class="artist">Sinister</span><br>
+                    <span class="title-song">Name song</span>
+                </div>
+
+                <div class="current-song-icons">
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-regular fa-folder"></i>
+                </div>
+            </div>
+
+            <div class="col grow bar-song">
+                <div class="row command">
+                    <i class="fa-solid fa-shuffle"></i>
+                    <i class="fa-solid fa-backward-step"></i>
+                    <i class="fa-regular fa-circle-play"></i>
+                    <i class="fa-solid fa-forward-step"></i>
+                    <i class="fa-solid fa-arrows-rotate"></i>
+                </div>
+                <div class="row progression-bar">
+                    <span>0:25</span>
+                    <input type="range" min="0" max="100" value="50" class="slider">
+                    <span>4:35</span>
+                </div>
+            </div>
+
+            <div class="col grow volume">
+                <i class="fa-solid fa-list"></i>
+                <i class="fa-solid fa-display"></i>
+                <i class="fa-solid fa-volume-high"></i>
+                <input type="range" min="0" max="100" value="50" class="slider">
+
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
