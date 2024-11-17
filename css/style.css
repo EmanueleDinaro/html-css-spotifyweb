@@ -69,6 +69,13 @@ body {
     display: flex;
 }
 
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-thumb {
+    background: #1db954;
+    border-radius: 10px;
+}
 /*----------------
     TYPOGRAPHY
 ------------------*/
@@ -146,10 +153,6 @@ header .nav-icons {
 .download {
     margin-bottom: 20px;
 }
-
-/* .download:hover {
-    color: #fff;
-} */
 
 #profile {
     width: 30px;
@@ -418,6 +421,15 @@ footer .col > img {
     margin: 0 0;
     width: 60px;
 }
+
+footer img,
+footer .artist,
+footer .fa-heart,
+footer .fa-folder,
+.row.command i,
+.col.grow.volume i {
+    cursor:pointer;
+}
 /*----------------
     RESPONSIVE
     Mobile First
@@ -507,9 +519,6 @@ footer .col > img {
         overflow-y: auto;
         height: 200px;
     }
-    .nav-playlist ul::-webkit-scrollbar {
-        display: none;
-    }
     .nav-playlist ul li {
         color: #707070;
     }
@@ -543,10 +552,10 @@ footer .col > img {
         background-color: #000;
         width: 100%;
         align-items: flex-start;
-        z-index: 100;
+        /* z-index: 100;
         position: sticky;
         bottom: 0;
-        left: 0;
+        left: 0; */
     }
     .profile a,
     .download a {
@@ -557,7 +566,7 @@ footer .col > img {
     .profile {
         margin-bottom: 0;
     }
-        .nav-bot .download-app {
+    .nav-bot .download-app {
         display: inline;
         color: #707070;
         font-weight: 600;
@@ -588,6 +597,7 @@ footer .col > img {
         width: calc(100% / 4);
     }
 
+    /* RESPONSIVE FOOTER */
     .col.info-song {
         padding: 10px 0px;
     }
