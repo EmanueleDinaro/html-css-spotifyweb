@@ -130,6 +130,7 @@ header .logo-small {
     padding: 8px;
 }
 
+/* HEADER ICONS (HOME / SEARCH / LIBRARY) */
 header .nav-icons {
     padding: 5px 10px; 
 }
@@ -139,6 +140,7 @@ header .nav-icons {
     border-left: 3px solid #adff2f;
 }
 
+/* HEADER NAV BOTTOM (DOWNLOAD AND PROFILE) */
 .nav-bot {
     display: flex;
     flex-direction: column;
@@ -237,6 +239,10 @@ main {
 }
 
  /* RECENTLY PLAYED SECTION */
+ .row {
+    width: 100%;
+}
+
 .recently-played,
 .create-for-you,
 .popular-artist {
@@ -266,10 +272,6 @@ main {
     text-align: center;
 }
 
-.row {
-    width: 100%;
-}
-
 .recently-played .row .col,
 .create-for-you .row .col,
 .popular-artist .row .col {
@@ -283,28 +285,6 @@ main {
     position: relative;
     display: block;
 }
-
-/* .overlay-album {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: transparent;
-}
-
-.overlay-album:hover {
-    background-color: rgba(0, 0, 0, 0.7);
-    display: block;
-    color: #fff;
-    font-size: 45px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
 
 .overlay-album {
     display: flex;
@@ -347,18 +327,18 @@ footer .row {
     width: 100%;
     height: 100%;
 }
-.col.info-song {
-    width: 30%;
-    padding: 30px 0px;
-}
-
 
 footer .col {
     height: 100%;
     display: flex;
     align-items: center;
     width: calc(100% / 3);
+}
 
+/* FOOTER LEFT (IMG / SONG / ARTIST) */
+.col.info-song {
+    width: 30%;
+    padding: 30px 0px;
 }
 
 footer .col > img {
@@ -386,6 +366,7 @@ footer .col > img {
     font-size: 12px;
 }
 
+/* FOOTER CENTER (COMMANDS) */
 .col.bar-song {
     display: flex;
     flex-direction: column;
@@ -393,6 +374,7 @@ footer .col > img {
     font-size: 1rem;
     width: 40%;
 }
+
 .row.command {
     height: 50%;
     display: flex;
@@ -401,16 +383,19 @@ footer .col > img {
     gap: 10px;
     color: #fff;
 }
+
 .row.command .fa-circle-play {
     margin: 0 10px;
     font-size: 22px;
 }
 
+/* FOOTER CENTER (SLIDER) */
 .progression-bar {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .slider {
     -webkit-appearance: none;
     width: 30%;
@@ -420,6 +405,7 @@ footer .col > img {
     outline: none;
     margin: 0 15px;
 }
+
 .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     width: 8px;
@@ -428,12 +414,14 @@ footer .col > img {
     background: #1db954;
     cursor: pointer;
 }
+
 .progression-bar span {
     font-size: 12px;
     color: #fff;
     font-weight: 600;
 }
 
+/* FOOTER RIGHT (SLIDER) */
 .col.grow.volume{
     display: flex;
     justify-content: flex-end;
@@ -457,6 +445,7 @@ footer .fa-folder,
 .col.grow.volume i {
     cursor:pointer;
 }
+
 /*----------------
     RESPONSIVE
     Mobile First
@@ -562,12 +551,10 @@ footer .fa-folder,
         font-weight: 700;
         border: none;
     }
-
     .plus-icon:hover {
         cursor: pointer;
         background-color: #fff;
     }
-
     .nav-playlist ul li:hover,
     .nav-playlist .create-playlist:hover {
         cursor: pointer;
@@ -579,10 +566,6 @@ footer .fa-folder,
         background-color: #000;
         width: 100%;
         align-items: flex-start;
-        /* z-index: 100;
-        position: sticky;
-        bottom: 0;
-        left: 0; */
     }
     .profile a,
     .download a {
